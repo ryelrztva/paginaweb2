@@ -1,0 +1,7 @@
+.cartaProductos{
+	height: 580px;
+}
+.imagenCard{
+	min-height: 20em;
+	max-height: 20em;
+}

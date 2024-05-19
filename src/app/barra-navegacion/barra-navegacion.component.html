@@ -1,0 +1,35 @@
+<nav class="navbar bg-secondary">
+  <div class="container-fluid">
+    <div class="row w-100 align-items-center">
+      <div class="col-10">
+        <a class="navbar-brand" routerLink="">
+          Tiendita de suculentas
+        </a>
+      </div>
+      <div class="col-1">
+        <a>
+          <div class="dropdown">
+            <button class=" btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorias
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" routerLink="/detalle-cactus">Cactus</a></li>
+              <li><a class="dropdown-item" routerLink="/detalle-echeveria">Echeveria</a></li>
+              <li><a class="dropdown-item" routerLink="/detalle-aeonium">Aeonium</a></li>
+              <li><a class="dropdown-item" routerLink="/detalle-crassula">Crassula</a></li>
+              <li><a class="dropdown-item" routerLink="/detalle-sedum">Sedum</a></li>
+            </ul>
+          </div>
+        </a>
+      </div>
+      <div class="col-1">
+        <a routerLink="carrito" >
+          <button type="button" class="btn btn-success" >
+            <i class="fa-solid fa-cart-shopping"></i>
+            Carrito
+          </button>  
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

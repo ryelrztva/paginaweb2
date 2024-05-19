@@ -1,0 +1,21 @@
+<div class="Container ms-3 mx-3">
+  <div class="row mt-3">
+    <div class="col-3" *ngFor="let producto of productos">
+      <div class="card text-center mt-3 cartaProductos">
+        <h5 class="card-header" (click)="detalle(producto)">{{ producto.nombre }}</h5>
+        <div class="row">
+          <img src={{producto.imagen}} class="imagenCard" (click)="detalle(producto)" alt="...">
+        </div>
+        <div class="card-body" (click)="detalle(producto)">
+          <h5 class="card-title text-warning">Precio: {{ producto.precio | currency  }}</h5>
+          <p *ngIf="producto.descripcion" class="card-text">{{ producto.descripcion }}</p>
+        </div>
+        <div class="card-footer text-body-secondary">
+          <button class="btn btn-primary" type="button" (click)="comprar(producto)">
+            Agregar al carrito
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

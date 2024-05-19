@@ -1,0 +1,68 @@
+<h3 class="text-center mt-3">Carrito</h3>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="card mt-1" *ngFor="let contenido of contenidoCarrito">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-2">
+              <img src={{contenido.imagen}} class="imagenCarrito" alt="...">
+            </div>
+            <div class="col-8">
+              <h5 class="card-title">{{contenido.nombre}}</h5>
+              <p class="card-text">
+                Placeholder content for this accordion, which is intended to demonstrate the Categoria:
+                {{contenido.categoria}}
+              </p>
+            </div>
+            <div class="col-2">
+              <code><h4>{{ contenido.precio | currency }}</h4></code>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card mt-1">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-2">
+            </div>
+            <div class="col-8">
+              <h5 class="card-title">Sub Total: </h5>
+              <h5 class="card-title mt-2">Iva: </h5>
+              <h5 class="card-title mt-2">Envio: </h5>
+            </div>
+            <div class="col-2">
+              <h5>{{ subTotal | currency }}</h5>
+              <h5>{{ (subTotal * 0.16) | currency }}</h5>
+              <h5>{{ 85 | currency }}</h5>
+            </div>
+          </div>  
+        </div>
+      </div>
+      <div class="card mt-1">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-2">
+            </div>
+            <div class="col-8">
+              <h5 class="card-title">Total: </h5>
+            </div>
+            <div class="col-2">
+              {{ (subTotal * 1.16) + 85 | currency }}
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-3">
+      <button class="btn btn-success mt-2">Proceder al pago</button>
+    </div>
+  </div>
+</div>
+

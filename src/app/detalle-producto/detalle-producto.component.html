@@ -1,0 +1,12 @@
+<div class="container mt-3 text-center">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <div *ngIf="producto !== undefined">
+        <h3>{{ producto.nombre }}</h3>
+        <img src={{producto.imagen}} class="imagenDetalle" alt="...">
+        <h4>{{ producto.precio | currency }}</h4>
+        <p>{{ producto.descripcion }}</p>
+      </div>
+    </div>
+  </div>
+</div>
